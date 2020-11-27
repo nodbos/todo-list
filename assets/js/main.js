@@ -1,5 +1,67 @@
+const MOCK_DATA = [
+   {
+       "id": 1,
+       "title": "Software Consultant",
+       "description": "Aomori University",
+       "done": false
+   },
+   {
+       "id": 2,
+       "title": "Structural Analysis",
+       "description": "St. Petersburg State University",
+       "done": false
+   },
+   {
+       "id": 3,
+       "title": "Marketing Manager",
+       "description": "Tokyo Keizai University",
+       "done": true
+   },
+   {
+       "id": 4,
+       "title": "Recruiting Manager",
+       "description": "Alice Salomon Fachhoch",
+       "done": false
+   },
+   {
+       "id": 5,
+       "title": "Statistician III",
+       "description": "Jaypee Institute",
+       "done": true
+   },
+   {
+       "id": 6,
+       "title": "Clinical Specialist",
+       "description": "University of Nebraska",
+       "done": true
+   },
+   {
+       "id": 7,
+       "title": "Professor",
+       "description": "Fachhochschule Vorarlberg",
+       "done": false
+   },
+   {
+       "id": 8,
+       "title": "Food Chemist",
+       "description": "Lankaran State University",
+       "done": true
+   },
+   {
+       "id": 9,
+       "title": "Web Designer IV",
+       "description": "Moscow State University",
+       "done": true
+   },
+   {
+       "id": 10,
+       "title": "Web Designer I",
+       "description": "Olivet College",
+       "done": false
+   }
+]
 // ----- Read JSON Data ----- //
-async function fetchJsonData(file) {
+/*async function fetchJsonData(file) {
    try {
       let response = await fetch(file);
       let data = await response.json();
@@ -8,7 +70,7 @@ async function fetchJsonData(file) {
       console.log(error);
       throw new Error(error);
    }
-}
+}*/
 // ----- Get Random Pastel Color ----- //
 function getPastelColor() {
    return `hsl(${360 * Math.random()}, 
@@ -74,5 +136,7 @@ function addTaskPopUP() {
    alert('Pop Up in Development...');
 }
 // ----- INIT ----- //
-console.log(fetchJsonData('../assets/data/MOCK_DATA.json'));
-fetchJsonData('../assets/data/MOCK_DATA.json').then(createTasks);
+/*console.log(fetchJsonData('../assets/data/MOCK_DATA.json'));
+fetchJsonData('../assets/data/MOCK_DATA.json').then(createTasks);*/
+
+createTasks(MOCK_DATA);
