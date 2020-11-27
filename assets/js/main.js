@@ -2,7 +2,7 @@
 async function fetchJsonData(file) {
    const proxyUrl = 'https://serene-savannah-61000.herokuapp.com/';
    try {
-      let response = await fetch(file);
+      let response = await fetch(proxyUrl + file);
       let data = await response.json();
       return data;
    } catch (error) {
